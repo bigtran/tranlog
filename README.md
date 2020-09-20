@@ -1,4 +1,4 @@
-# tranlog
+# translog
 blog application based on webman
 
 # 当前状态
