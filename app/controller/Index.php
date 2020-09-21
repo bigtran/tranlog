@@ -12,7 +12,7 @@ class Index
 
     public function view(Request $request)
     {
-        return view('index/view', ['name' => 'webman']);
+        return view('index/view', ['name' => 'webman-index']);
     }
 
     public function json(Request $request)
