@@ -16,7 +16,7 @@ return [
 
     'type'    => 'file', // or redis
 
-    'handler' => Webman\FileSessionHandler::class,
+    'handler' => Webman\FileSessionHandler::class,          // Webman\FileSessionHandler::class 或者 Webman\RedisSessionHandler::class
 
     'config' => [
         'file' => [

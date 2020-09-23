@@ -16,5 +16,13 @@ return [
     '' => [
         //support\middleware\AuthCheckTest::class,
         //support\middleware\AccessControlTest::class,
+    ],
+    // api应用中间件
+    'api' => [
+        //support\middleware\AuthCheckTest::class,
+     ],
+    // admin应用中间件
+    'admin' =>  [
+        //support\middleware\AuthCheckTest::class,
     ]
 ];

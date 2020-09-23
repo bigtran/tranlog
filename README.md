@@ -6,7 +6,8 @@ blog application based on webman
 
 # ToDos
 - [x] 取个名字 translog = webman blog program
-- [ ] 配置开发环境 nginx virtual host 80 端口 转发 workman 8787
+- [x] 配置开发环境 nginx virtual host 80 端口 转发 workman 8787
+- [ ] Test.php 把 https://www.workerman.net/doc/webman#/ 中的示例都实现一遍
 - [ ] 简化一下 mysql 操作类，直接用sql最好
 - [ ] 简化一下 模板类，直接用 php code最好
 - [ ] 设计一下数据库（？）
