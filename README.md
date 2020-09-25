@@ -21,6 +21,7 @@ blog application based on webman
     * [ ] achieve
     * [ ] rss
     * [ ] blog.db  系统初始话，生成一个基本信息表
+    * [ ] 评论 和 留言 gitalk
 - [ ] 模板设计
     * 初始化一个简洁的模板！
 - [ ] 文章存储
@@ -35,3 +36,4 @@ blog application based on webman
 - parsedown: Markdown Parser https://github.com/erusev/parsedown
 - rss spec: https://www.rssboard.org/rss-specification
 - rss xml generator: https://github.com/zelenin/RSS-Generator
+- gitalk: https://github.com/gitalk/gitalk/blob/master/readme-cn.md

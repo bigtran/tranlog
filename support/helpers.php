@@ -63,6 +63,15 @@ function runtime_path()
 }
 
 /**
+ * @return string
+ */
+function site_path()
+{
+    return BASE_PATH . DIRECTORY_SEPARATOR . '_site';
+}
+
+
+/**
  * @param int $status
  * @param array $headers
  * @param string $body
