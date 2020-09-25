@@ -12,14 +12,24 @@ blog application based on webman
 - [x] 简化一下 mysqli 操作类，直接用sql
     - 增加 mysqli functions，加载到 autoload里
 - [x] 增加一些常用函数库
-- [x] 设计一下数据库（？）
+- [x] 增加类Hugo的 yaml 文章解析
 - [ ] 功能设计
-    * post?
-    * page?
+    * [x] post
+    * [ ]page
+        - [ ] about
+        - [ ] category / tag / keywords
+    * [ ] achieve
+    * [ ] rss
+    * [ ] blog.db  系统初始话，生成一个基本信息表
 - [ ] 模板设计
     * 初始化一个简洁的模板！
 - [ ] 文章存储
     * 使用数据库存储？
     * 还是从github repo读取文件？
     * 还是从有道云笔记读取？
-    * 参考一下hexo 和 ghost
+
+
+
+# thanks to
+- spyc: YAML loader https://github.com/mustangostang/spyc.git
+- 
