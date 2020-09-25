@@ -8,14 +8,11 @@ blog application based on webman
 - [x] 取个名字 translog = webman blog program
 - [x] 配置开发环境 nginx virtual host 80 端口 转发 workman 8787
 - [x] Test.php 把 https://www.workerman.net/doc/webman#/ 中的示例都实现一遍
-    - 20200924 进度 数据库部分
-    - 20200925 ...
-    - 20200926 ...
     - 新增一个branch 当做 webman的学习
-- [ ] 简化一下 mysql 操作类，直接用sql最好
-    - 增加 mysqli class
-- [ ] 简化一下 模板类，直接用 php code最好
-- [ ] 设计一下数据库（？）
+- [x] 简化一下 mysqli 操作类，直接用sql
+    - 增加 mysqli functions，加载到 autoload里
+- [x] 增加一些常用函数库
+- [x] 设计一下数据库（？）
 - [ ] 功能设计
     * post?
     * page?

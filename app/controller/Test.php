@@ -3,6 +3,9 @@ namespace app\controller;
 
 use support\Request;
 use support\Db;
+use support\bootstrap\Redis;
+
+
 
 class Test
 {
@@ -256,10 +259,28 @@ class Test
     }
 
 
-    public function db(Request $request){
-        $name = Db::table('kv')->where('k', 'name')->value('v');
-        return response("hello $name");
+    public function db_laravel(Request $request){
+        $v = Db::table('kv')->where('k', 'name')->value('v');
+        return response("hello $v");
     }
 
-    
+    // 查询构造器
+    // https://www.workerman.net/doc/webman#/db/queries
+    public function db_queries(Request $request){
+        return response("db_queries");
+    }
+
+    // https://www.workerman.net/doc/webman#/redis
+    public function redis(Request $request){
+        $key = 'test_key';
+        Redis::set($key, rand());
+        return response(Redis::get($key));
+    }
+
+
+    // mysqli function op
+    public function mysqli_test(Request $request){
+        $v = get_var("select v from kv where k='name'");
+        return response("hello $v");
+    }
 }

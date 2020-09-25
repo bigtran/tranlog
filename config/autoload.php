@@ -14,6 +14,7 @@
 
 return [
     'files' => [
-        base_path() . '/app/functions.php'
+        base_path() . '/app/functions.php',
+        base_path() . '/app/functions/mysqli.php',		// mysql op as func
     ]
 ];

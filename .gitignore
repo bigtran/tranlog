@@ -1,2 +1,4 @@
 # sftp 配置文件，有密码的，不能上传
 sftp-config.json
+.env
+database.php
