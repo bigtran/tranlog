@@ -1,6 +1,6 @@
 <?php
 // db config 
-$GLOBALS['config']['db']['db_host'] = 
+$GLOBALS['config']['db']['db_host'] = env('DB_HOST', '127.0.0.1');
 $GLOBALS['config']['db']['db_port'] = env('DB_PORT', '3306');
 $GLOBALS['config']['db']['db_user'] = env('DB_USERNAME', 'bigtran');
 $GLOBALS['config']['db']['db_password'] = env('DB_PASSWORD', 'password');
