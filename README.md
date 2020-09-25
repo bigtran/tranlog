@@ -32,4 +32,6 @@ blog application based on webman
 
 # thanks to
 - spyc: YAML loader https://github.com/mustangostang/spyc.git
-- 
+- parsedown: Markdown Parser https://github.com/erusev/parsedown
+- rss spec: https://www.rssboard.org/rss-specification
+- rss xml generator: https://github.com/zelenin/RSS-Generator
