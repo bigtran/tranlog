@@ -14,7 +14,8 @@
 
 use support\Request;
 use support\Response;
-use support\view\Raw;
+//use support\view\Raw;
+use support\view\TransLogTheme;
 use support\bootstrap\Translation;
 use Webman\App;
 use Webman\Config;
@@ -62,6 +63,7 @@ function runtime_path()
     return BASE_PATH . DIRECTORY_SEPARATOR . 'runtime';
 }
 
+// todo: move to translog helper
 /**
  * @return string
  */
@@ -69,6 +71,26 @@ function site_path()
 {
     return BASE_PATH . DIRECTORY_SEPARATOR . '_site';
 }
+
+
+/**
+ * @return string
+ */
+function article_path()
+{
+    return BASE_PATH . DIRECTORY_SEPARATOR . '_site/_articles';
+}
+
+
+
+/**
+ * @return string
+ */
+function theme_path()
+{
+    return BASE_PATH . DIRECTORY_SEPARATOR . '_site/_theme';
+}
+
 
 
 /**

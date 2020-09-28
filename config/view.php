@@ -16,10 +16,12 @@ use support\view\Raw;
 use support\view\Twig;
 use support\view\Blade;
 use support\view\ThinkPHP;
+use support\view\TransLogTheme;
 
 
 // 默认使用 PHP 原生语法作为模板
 
 return [
-    'handler' => Raw::class
+    //'handler' => Raw::class
+    'handler' => TransLogTheme::class
 ];

@@ -22,6 +22,14 @@ class Index
         return json($article);
     }
 
+    public function theme(Request $request){
+        
+        $theme_dir = env('THEME_NAME', 'default');
+        $site_url = "http://www.bigtran.com";
+        $theme_url = $site_url."/_theme/".$theme_dir."/";
+        return view("index", ['theme_url' => $theme_url]);
+    }
+
     
     
 }
