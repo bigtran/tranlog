@@ -19,15 +19,17 @@ blog application based on webman
     - [ ] *.md 中 文章信息配置部分
 - [ ] 目录结构优化
 - [ ] 编辑一系列测试用的文章 —— 《孙子兵法》
+- [ ] 学习wordpress，要有一个初始分类、文章、评论
 - [ ] 功能设计
     * [ ] blog.db  系统初始话，生成一个基本信息表
     * [x] post
-    * [ ]page
+    * [ ] page
         - [ ] about
-        - [ ] category / tag / keywords
     * [ ] achieve
+        - [ ] by category / tag / keywords —— 基础功能
+        - [ ] by time
     * [ ] rss
-    * [ ] 评论 和 留言 gitalk
+    * [ ] 评论 和 留言 gitalk，或者用一个简单的sqlite？
     * [ ] 基本函数
     * [ ] 一些配置项
 - [x] 模板设计
