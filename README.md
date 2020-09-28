@@ -24,7 +24,7 @@ blog application based on webman
     * [ ] rss
     * [ ] blog.db  系统初始话，生成一个基本信息表
     * [ ] 评论 和 留言 gitalk
-- [ ] 模板设计
+- [x] 模板设计
     * 初始化一个简洁的模板！
 - [ ] 文章存储
     * 使用数据库存储？
