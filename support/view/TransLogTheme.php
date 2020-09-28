@@ -28,9 +28,9 @@ class TransLogTheme implements View
         $view_suffix = $view_suffix ? : config('view.view_suffix', 'php');
         $app_name = $app == null ? request()->app : $app;
         if ($app_name === '') {
-            $view_path = theme_path() . "/". $theme_dir."/$template.$view_suffix";
+            $view_path = public_path() . "/_theme/". $theme_dir."/$template.$view_suffix";
         } else {
-            $view_path = app_path() . $theme_dir. "/$app_name/$template.$view_suffix";
+            $view_path = public_path() . "/_theme/". $theme_dir. "/$app_name/$template.$view_suffix";
         }
         \extract($vars);
         \ob_start();
