@@ -15,21 +15,31 @@ blog application based on webman
     - 增加 mysqli functions，加载到 autoload里
 - [x] 增加一些常用函数库
 - [x] 增加类Hugo的 yaml 文章解析
+    - [ ] site.yml 配置文件定义
+    - [ ] *.md 中 文章信息配置部分
+- [ ] 目录结构优化
+- [ ] 编辑一系列测试用的文章 —— 《孙子兵法》
 - [ ] 功能设计
+    * [ ] blog.db  系统初始话，生成一个基本信息表
     * [x] post
     * [ ]page
         - [ ] about
         - [ ] category / tag / keywords
     * [ ] achieve
     * [ ] rss
-    * [ ] blog.db  系统初始话，生成一个基本信息表
     * [ ] 评论 和 留言 gitalk
+    * [ ] 基本函数
+    * [ ] 一些配置项
 - [x] 模板设计
-    * 初始化一个简洁的模板！
-- [ ] 文章存储
+    * [x] 初始化一个简洁的模板！ —— ThreeLittleBirds
+    * [ ] 再初始化一个简洁模板，用来做文档！ —— transdoc? *
+- [x] 文章存储
     * 使用数据库存储？
     * 还是从github repo读取文件？
     * 还是从有道云笔记读取？
+    * 最后想了一下，还是用md文件存储得了，为什么？省事！
+- [ ] 最后一步，清理代码，发布
+- [ ] 补充文档
 
 
 
