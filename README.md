@@ -3,6 +3,8 @@ blog application based on webman
 
 # 当前状态
 开发中...
+首页出来了...
+![首页图片](/public/home.png)
 
 # ToDos
 - [x] 取个名字 translog = webman blog program

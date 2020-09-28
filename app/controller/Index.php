@@ -20,7 +20,7 @@ class Index
     }
 
     public function test(){
-        $article = spyc_load_file(site_path() . '/_articles/init.md');
+        $article = spyc_load_file(site_path() . '/_articles/employee-executive-power-equal-to-managers-leadership.md');
         $title = $article['title'];
         $description = $article['description'];
         $keywords = $article['keywords'];
