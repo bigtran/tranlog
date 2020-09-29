@@ -2,7 +2,7 @@
 title: 始计篇
 date: 2020/09/30 01:10
 draft: true
-slug: 3-laying-plans
+slug: 1-laying-plans
 categories:
     - the-art-of-war
 ---
