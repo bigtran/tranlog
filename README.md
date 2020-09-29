@@ -32,6 +32,7 @@ blog application based on webman
     * [ ] 评论 和 留言 gitalk，或者用一个简单的sqlite？
     * [ ] 基本函数
     * [ ] 一些配置项
+    * [ ] 加密访问
 - [x] 模板设计
     * [x] 初始化一个简洁的模板！ —— ThreeLittleBirds
     * [ ] 再初始化一个简洁模板，用来做文档！ —— transdoc? *
@@ -52,3 +53,4 @@ blog application based on webman
 - rss spec: https://www.rssboard.org/rss-specification
 - rss xml generator: https://github.com/zelenin/RSS-Generator
 - gitalk: https://github.com/gitalk/gitalk/blob/master/readme-cn.md
+- jekyll: http://jekyllcn.com/docs/home/
