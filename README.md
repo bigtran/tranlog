@@ -18,12 +18,13 @@ blog application based on webman
     - [ ] site.yml 配置文件定义
     - [ ] *.md 中 文章信息配置部分
 - [ ] 目录结构优化
-- [ ] 编辑一系列测试用的文章 —— 《孙子兵法》
-- [ ] 学习wordpress，要有一个初始分类、文章、评论
+- [x] 编辑一系列测试用的文章 —— 《孙子兵法》
+- [x] 学习wordpress，要有一个初始分类、文章、评论
+    - [ ] 文章要好好写一下
 - [ ] 功能设计
     * [ ] blog.db  系统初始话，生成一个基本信息表
     * [x] post
-    * [ ] page
+    * [ ] page  => .html / .php ?
         - [ ] about
     * [ ] achieve
         - [ ] by category / tag / keywords —— 基础功能
@@ -35,7 +36,8 @@ blog application based on webman
     * [ ] 加密访问
 - [x] 模板设计
     * [x] 初始化一个简洁的模板！ —— ThreeLittleBirds
-    * [ ] 再初始化一个简洁模板，用来做文档！ —— transdoc? *
+    * [ ] 再初始化一个简洁模板，用来做文档！ —— transdoc? 
+    * [ ] 参考wordpress的函数式版面
 - [x] 文章存储
     * 使用数据库存储？
     * 还是从github repo读取文件？
