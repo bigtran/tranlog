@@ -15,7 +15,7 @@ blog application based on webman
     - 增加 mysqli functions，加载到 autoload里
 - [x] 增加一些常用函数库
 - [x] 增加类Hugo的 yaml 文章解析
-    - [ ] site.yml 配置文件定义
+    - [x] site.yml 配置文件定义
     - [ ] *.md 中 文章信息配置部分
 - [ ] 目录结构优化
 - [x] 编辑一系列测试用的文章 —— 《孙子兵法》
@@ -33,7 +33,7 @@ blog application based on webman
     * [ ] 评论 和 留言 gitalk，或者用一个简单的sqlite？
     * [ ] 基本函数
     * [ ] 一些配置项
-    * [ ] 加密访问
+    * [ ] 加密访问 => 用插件完成
 - [x] 模板设计
     * [x] 初始化一个简洁的模板！ —— ThreeLittleBirds
     * [ ] 再初始化一个简洁模板，用来做文档！ —— transdoc? 
