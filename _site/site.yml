@@ -1,8 +1,10 @@
-# refer  https://gohugo.io/variables/site/
 ---
-baseURL: "http://bigtran.com/translog"
-languageCode: "zh-CN"
-relativeURLs: true
-title:  "tanslog官方网站"
-
+title: Another translog site
+description: 一个用translog搭建的站点
+baseURL: http://127.0.0.1:8787/
+copyright: bigtran 2020
+home: index
+theme: default
+keywords: webman, PHP Blog, bigtran
+author: bigtran
 ---
