@@ -24,6 +24,7 @@ class TransLogTheme implements View
     public static function render($template, $vars, $app = null)
     {
         $theme_dir = env('THEME_NAME', 'default');
+        
         static $view_suffix;
         $view_suffix = $view_suffix ? : config('view.view_suffix', 'php');
         $app_name = $app == null ? request()->app : $app;
@@ -36,6 +37,7 @@ class TransLogTheme implements View
         \ob_start();
         // Try to include php file.
         try {
+            //include base_path() . '/app/functions/translog.function.php';
             include $view_path;
         } catch (\Throwable $e) {
             echo $e;

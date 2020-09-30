@@ -52,6 +52,7 @@ foreach ($property_map as $property) {
 }
 
 $worker->onWorkerStart = function ($worker) {
+    // 加载config/autoload.php中的文件
     foreach (config('autoload.files', []) as $file) {
         include_once $file;
     }

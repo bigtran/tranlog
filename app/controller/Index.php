@@ -8,9 +8,7 @@ class Index
 {
     public function index(Request $request)
     {
-        $theme_dir = env('THEME_NAME', 'default');
-        $site_url = "";
-        $theme_url = $site_url."/_theme/".$theme_dir."/";
+        $theme_url = _themeUrl();
         return view("index", ['theme_url' => $theme_url]);
     }
 
@@ -20,18 +18,10 @@ class Index
     }
 
     public function test(){
-        $article = spyc_load_file(site_path() . '/_articles/employee-executive-power-equal-to-managers-leadership.md');
-        $title = $article['title'];
-        $description = $article['description'];
-        $keywords = $article['keywords'];
-        $date = $article['date'];
-        $lastmod = $article['lastmod'];
-        $draft = $article['draft'];
-        $slug = $article['slug'];
-        $tag = $article['tag'];
-        $categories = $article['categories'];
-        //return view('index/view', ['content' => $data]);
-        return json($article);
+        //$article = splitYamlMarkdown(site_path() . '/_articles/hello-translog.md');
+        $thepost = _thePost("hello-translog");
+        
+        return json($thepost);
     }
 
     

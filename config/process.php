@@ -16,6 +16,7 @@ use support\view\Raw;
 use support\view\Twig;
 use support\view\Blade;
 use support\view\ThinkPHP;
+use support\view\TransLogTheme;
 
 return [
     // 文件更新检测
