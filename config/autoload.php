@@ -15,7 +15,8 @@
 return [
     'files' => [
         base_path() . '/app/functions.php',
-        base_path() . '/app/functions/mysqli.php',		// mysql op as func
-        base_path() . '/app/functions/Spyc.php',		// mysql op as func
+        base_path() . '/app/functions/mysqli.php',					// mysql op as func
+        base_path() . '/app/functions/Spyc.php',					// yaml op as func
+        base_path() . '/app/functions/translog.function.php'		// translog op as func
     ]
 ];
