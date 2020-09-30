@@ -510,17 +510,8 @@ class Spyc {
     $this->result = array();
 
     $cnt = count($Source);
-
     for ($i = 0; $i < $cnt; $i++) {
       $line = $Source[$i];
-
-      if (self::isStartAndEnd($line) and $i>0){
-        
-        $article_content = array_slice($Source,$i+1);
-        $this->result["article_content"] = $article_content;
-
-        $i = $cnt+1;
-      }
 
       $this->indent = strlen($line) - strlen(ltrim($line));
       $tempPath = $this->getParentPathByIndent($this->indent);
@@ -569,7 +560,7 @@ class Spyc {
 
   private function loadFromSource ($input) {
     if (!empty($input) && strpos($input, "\n") === false && file_exists($input))
-      $input = file_get_contents($input);                                         //获取文件内容
+      $input = file_get_contents($input);
 
     return $this->loadFromString($input);
   }
@@ -1039,11 +1030,6 @@ class Spyc {
   private static function isComment ($line) {
     if (!$line) return false;
     if ($line[0] == '#') return true;
-    if (trim($line, " \r\n\t") == '---') return true;
-    return false;
-  }
-
-  private static function isStartAndEnd ($line) {
     if (trim($line, " \r\n\t") == '---') return true;
     return false;
   }
