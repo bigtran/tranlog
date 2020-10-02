@@ -20,3 +20,7 @@ use Webman\Route;
 #});
 
 Route::any('/route-test', 'app\controller\Index@index');
+
+Route::any('/article/{slug}', 'app\controller\Article@index');
+Route::any('/page/{slug}', 'app\controller\Page@index');
+
