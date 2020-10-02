@@ -15,19 +15,27 @@ function _siteInfo($key){
 function _themeUrl(){
 	$site_url = _siteInfo("baseURL");
 	$theme_dir = _siteInfo("theme") ? _siteInfo("theme") : 'default';
-    $theme_url = $site_url."_theme/".$theme_dir."/";
+    $theme_url = "/"."_theme/".$theme_dir."/";
     return $theme_url;
 }
 
 
-function _thePost($slug){
+function _theArticle($slug){
 	$file_path = site_path() . '/_articles/'.$slug.'.md';
 	$thispost = splitYamlMarkdown($file_path);
 	$thepost['meta'] = spyc_load_file($thispost['yaml']);
 	$thepost['content'] = $thispost['markdown'];
 
 	return $thepost;
+}
 
+function _theArticle_file($file_slug){
+	$file_path = site_path() . '/_articles/'.$file_slug;
+	$thispost = splitYamlMarkdown($file_path);
+	$thepost['meta'] = spyc_load_file($thispost['yaml']);
+	$thepost['content'] = $thispost['markdown'];
+
+	return $thepost;
 }
 
 function isStartAndEnd($line){
@@ -68,6 +76,66 @@ function splitYamlMarkdown($file_path){
       	$content['markdown'] = "";
 		return $content;
 	}
+}
+
+
+function getAllArticles($path=""){
+	if($path==""){
+		$path = site_path() . '/_articles';
+	}
+	$article_files = array();
+	$handle = opendir($path);
+
+	if($handle){
+        while(($file_or_path = readdir($handle)) !== false){
+            $temp = $path.'/'.$file_or_path;
+            if(is_dir($temp) && $file_or_path!='.' && $file_or_path != '..'){
+                $article_files[$file_or_path] = getAllArticles($temp);
+            }else{
+                if($file_or_path!='.' && $file_or_path != '..'){
+                    $article_files[] = $file_or_path;
+                }
+            }
+        }
+    }
+	return $article_files;
+}
+
+function getAllArticlesPath($path=""){
+	if($path==""){
+		$path = site_path() . '/_articles';
+	}
+	$article_files = array();
+	$handle = opendir($path);
+
+	if($handle){
+        while(($file_or_path = readdir($handle)) !== false){
+            $temp = $path.'/'.$file_or_path;
+            if(is_dir($temp) && $file_or_path!='.' && $file_or_path != '..'){
+                $articles_files_subfolder = getAllArticlesPath($temp);
+                foreach ($articles_files_subfolder as $articles_file) {
+                	$article_files[] = $articles_file;
+                }
+            }else{
+                if($file_or_path!='.' && $file_or_path != '..'){
+                    $article_files[] = str_replace(site_path() . '/_articles/', '', $temp);
+                }
+            }
+        }
+    }
+	return $article_files;
+}
+
+function getAllArticlesInfo(){
+	$article_files = getAllArticlesPath();
+	foreach ($article_files as $article_file_path) {
+		$article_arr = _theArticle_file($article_file_path);
+		if (!empty($article_arr['meta'])){
+			$articles[$article_file_path] = $article_arr['meta'];
+		}
+	}
+
+	return $articles;
 }
 
 ?>
