@@ -3,7 +3,7 @@ title: Another translog site
 description: 一个用translog搭建的站点
 baseURL: http://127.0.0.1:8787/
 copyright: bigtran 2020
-home: index
+home: /index
 theme: default
 keywords: webman, PHP Blog, bigtran
 author: bigtran
