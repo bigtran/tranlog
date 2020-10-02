@@ -13,10 +13,10 @@
                             at Beijing, China.<br>
                             contact via <a href="mailto:bigtran@qq.com">bigtran@qq.com</a>
                             <br><br><br>
-                            <a href="<?=_siteInfo('baseURL')?>/achieves" target="_blank">文章归档</a><br>
-                            <a href="<?=_siteInfo('baseURL')?>/page/projects" target="_blank">一些在做的项目</a><br>
-                            <a href="<?=_siteInfo('baseURL')?>/page/about" target="_blank">关于我</a><br>
-                            <a href="<?=_siteInfo('baseURL')?>/rss" target="_blank">RSS</a>
+                            <a href="<?=_siteInfo('baseURL')?>achieves" >文章归档</a><br>
+                            <a href="<?=_siteInfo('baseURL')?>page/projects" >一些在做的项目</a><br>
+                            <a href="<?=_siteInfo('baseURL')?>page/about" >关于我</a><br>
+                            <a href="<?=_siteInfo('baseURL')?>rss" target="_blank">RSS</a>
                             <br>
                             <br>
                             <br>

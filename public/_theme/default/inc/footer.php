@@ -1,5 +1,5 @@
 		<!--Load JavaScript-->
-        <script type="text/javascript" src="<?=_themeUrl()?>js/jquery.js"></script>			                                       
+        <script type="text/javascript" src="<?=_themeUrl()?>js/jquery.min.js"></script>			                                       
         <script type='text/javascript' src='<?=_themeUrl()?>js/imagesloaded.pkgd.js'></script>                
         <script type='text/javascript' src='<?=_themeUrl()?>js/isotope.pkgd.js'></script>                
         <script type='text/javascript' src='<?=_themeUrl()?>js/jquery.smartmenus.min.js'></script>           
