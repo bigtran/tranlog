@@ -24,10 +24,10 @@ blog application based on webman
 - [ ] 功能设计
     * [ ] blog.db  系统初始话，生成一个基本信息表
     * [x] post
-    * [ ] markdown 语言解析，想想还是用js来处理
-    * [ ] page  => .html / .php ?
-        - [ ] about
-    * [ ] achieve
+    * [x] markdown 语言解析，想想还是用js来处理
+    * [x] page  => .html / .php ?
+        - [x] about
+    * [x] achieve
         - [ ] by category / tag / keywords —— 基础功能
         - [ ] by time
     * [ ] rss
@@ -38,7 +38,7 @@ blog application based on webman
 - [x] 模板设计
     * [x] 初始化一个简洁的模板！ —— ThreeLittleBirds
     * [ ] 再初始化一个简洁模板，用来做文档！ —— transdoc? 
-    * [ ] 参考wordpress的函数式版面
+    * [x] 参考wordpress的函数式版面
 - [x] 文章存储
     * 使用数据库存储？
     * 还是从github repo读取文件？
