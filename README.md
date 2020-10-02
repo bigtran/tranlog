@@ -24,6 +24,7 @@ blog application based on webman
 - [ ] 功能设计
     * [ ] blog.db  系统初始话，生成一个基本信息表
     * [x] post
+    * [ ] markdown 语言解析，想想还是用js来处理
     * [ ] page  => .html / .php ?
         - [ ] about
     * [ ] achieve
@@ -52,7 +53,9 @@ blog application based on webman
 # thanks to
 - spyc: YAML loader https://github.com/mustangostang/spyc.git
 - parsedown: Markdown Parser https://github.com/erusev/parsedown
+- editor.md: https://github.com/pandao/editor.md
 - rss spec: https://www.rssboard.org/rss-specification
 - rss xml generator: https://github.com/zelenin/RSS-Generator
 - gitalk: https://github.com/gitalk/gitalk/blob/master/readme-cn.md
 - jekyll: http://jekyllcn.com/docs/home/
+- https://forestry.io
