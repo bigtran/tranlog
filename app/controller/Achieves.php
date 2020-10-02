@@ -4,10 +4,11 @@ namespace app\controller;
 use support\Request;
 
 
-class achieves
+class Achieves
 {
     public function index(Request $request)
     {
-        return view("achieves", ['nothing' => ""]);
+    	$articles = getAllArticlesInfo();
+        return view("achieves", ['articles' => $articles]);
     }
 }

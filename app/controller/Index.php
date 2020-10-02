@@ -18,10 +18,11 @@ class Index
     }
 
     public function test(){
-        //$article = splitYamlMarkdown(site_path() . '/_articles/hello-translog.md');
-        $thepost = _thePost("hello-translog");
+        // $thepost = _thePost("hello-translog");
+
+        $articles = getAllArticlesInfo();
         
-        return json($thepost);
+        return json($articles);
     }
 
     

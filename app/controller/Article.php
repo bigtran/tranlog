@@ -4,10 +4,16 @@ namespace app\controller;
 use support\Request;
 
 
-class article
+class Article
 {
-    public function index(Request $request)
+    public function index($request, $slug)
     {
-        return view("article", ['nothing' => ""]);
+    	$theArticle = _theArticle($slug);
+        return view("article", ['theArticle' => $theArticle]);
+    }
+
+    public function list(Request $request)
+    {
+    	return view("index", ['nothing' => ""]);
     }
 }

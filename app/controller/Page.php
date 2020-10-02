@@ -4,10 +4,10 @@ namespace app\controller;
 use support\Request;
 
 
-class page
+class Page
 {
-    public function index(Request $request)
+    public function index($request, $slug)
     {
-        return view("page", ['nothing' => ""]);
+        return view($slug, ['nothing' => "nothing"]);
     }
 }
