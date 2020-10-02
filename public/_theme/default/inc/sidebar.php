@@ -1,6 +1,6 @@
                 <div class="content-left-holder">
                     <div class="welcome-content">
-                        <img class="welcome-image" src="<?=$theme_url?>images/background.png" alt="" />
+                        <img class="welcome-image" src="<?=_themeUrl()?>images/background.png" alt="" />
                         <h1 class="site-logo" style="height:350px; font-size:42px; line-height: 42px;">
                             <a href="/">
                                 <?=_siteInfo('title')?>
