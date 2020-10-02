@@ -8,13 +8,13 @@ class Index
 {
     public function index(Request $request)
     {
-        $theme_url = _themeUrl();
-        return view("index", ['theme_url' => $theme_url]);
-    }
+        $home_url = _siteInfo('home');
 
-    public function theme(Request $request){
-        
-        
+        if(($home_url == '/index') or ($home_url == '/index/index')){
+            return view("index", ['nothing' => ""]);
+        }else{
+            return redirect($home_url);
+        }
     }
 
     public function test(){
