@@ -12,6 +12,9 @@
  * @license   http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
+// refer: https://segmentfault.com/a/1190000014508613
+// refer: https://github.com/nikic/FastRoute
+
 use Webman\Route;
 
 
@@ -21,6 +24,6 @@ use Webman\Route;
 
 Route::any('/route-test', 'app\controller\Index@index');
 
-Route::any('/article/{slug}', 'app\controller\Article@index');
+Route::any('/article/{slug:.+}', 'app\controller\Article@index');
 Route::any('/page/{slug}', 'app\controller\Page@index');
 
