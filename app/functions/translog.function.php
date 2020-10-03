@@ -38,6 +38,22 @@ function _theArticle_file($file_slug){
 	return $thepost;
 }
 
+function _theExcerpt($markdown_content){
+	$moreString = '<!--more-->';
+	$whereIsMore = mb_strpos($markdown_content,$moreString);
+	if(!$whereIsMore){
+		$the_excerpt = mb_substr($markdown_content, 0, 120, 'utf-8');
+		//if(mb_strlen($markdown_content)>120){
+		//	$the_excerpt = $the_excerpt ."……".mb_strlen($markdown_content);
+		//}
+	}else{
+		$the_excerpt = mb_substr($markdown_content, 0, $whereIsMore, 'utf-8');
+	}
+
+
+	return $the_excerpt;
+}
+
 function isStartAndEnd($line){
 	if (trim($line, " \r\n\t") == '---') return true;
     return false;
@@ -132,8 +148,14 @@ function getAllArticlesInfo(){
 		$article_arr = _theArticle_file($article_file_path);
 		if (!empty($article_arr['meta'])){
 			$articles[$article_file_path] = $article_arr['meta'];
+			if (empty($article_arr['meta']['excerpt'])){
+				$articles[$article_file_path]['excerpt'] = _theExcerpt($article_arr['content']);
+			}
 		}
 	}
+
+	$article_date = array_column($articles,'date');
+	array_multisort($article_date,SORT_DESC,$articles);
 
 	return $articles;
 }
