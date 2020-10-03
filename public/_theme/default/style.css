@@ -41,8 +41,9 @@ body a
 
 body a:hover
 {
-    color: #acacac;
+    color: blue;
 }
+
 
 body img
 {
@@ -200,7 +201,7 @@ body img
     display: block;
     width: 0;
     height: 6px;
-    background-color: #8bd2ff;
+    background-color: blue;
     transition: width .3s;
     position: absolute;
     left: 0;
@@ -223,7 +224,7 @@ body img
 
 .sm-clean a span.sub-arrow
 {
-    color: #8bd2ff;
+    color: blue;
 }
 
 .main-menu.sm-clean .sub-menu li a
@@ -627,7 +628,8 @@ ul.services-list li:after
 
 .blog-item-holder 
 {
-    padding-bottom: 100px;
+    padding-bottom: 42px;
+    border-bottom: 1px whitesmoke solid;
 }
 
 .blog-item-holder:last-child
@@ -646,13 +648,13 @@ ul.services-list li:after
 .blog-item-holder .item-text
 {        
     position: relative;
-    margin-top: -70px;
+    margin-top: 0px;
 }
 
 .blog-item-holder .item-info 
 {
     background-color: #fff;
-    padding: 15px 0 10px 35px;
+    padding: 0 0 0 15px;
     width: 285px;
 }
 
@@ -701,7 +703,7 @@ a.read-more:after
     display: block;
     width: 0;
     height: 4px;
-    background-color: #8bd2ff;
+    background-color: blue;
     transition: width .3s;
     position: absolute;
     left: 0;
@@ -862,7 +864,7 @@ a.read-more:hover:after
 
 .category-filter-list .button.is-checked
 {
-    color: #8bd2ff;
+    color: blue;
 }
 
 .isotope.no-transition,
@@ -1633,7 +1635,7 @@ a.achieve_title:after
     display: block;
     width: 0;
     height: 4px;
-    background-color: #8bd2ff;
+    background-color: blue;
     transition: width .3s;
     position: absolute;
     left: 0;
@@ -1665,4 +1667,36 @@ a.achieve_title:hover:after
     width: 340px;
     margin-left:700px;
     position: fixed;
+}
+
+.item-info ul li{
+    list-style: none;
+    padding: 0px;
+}
+
+.item-info ul{
+    list-style: none;
+    padding: 0px;
+}
+
+
+.entry-title a:after 
+{
+    content: '';
+    display: block;
+    width: 0;
+    height: 4px;
+    background-color: blue;
+    transition: width .3s;
+    position: absolute;
+    left: 0;
+    bottom: 6px;
+    z-index: -1;
+}
+.entry-title a:hover:after 
+{
+    width: 100%;
+}
+.entry-title a:hover{
+    color:blue;
 }

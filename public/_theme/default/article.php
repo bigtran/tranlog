@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en-US">
+<html lang="zh-CN">
     <head>
         <?php require("inc/header.php");?>
         <link rel="stylesheet" type="text/css"  href='<?=_themeUrl()?>assets/editor.md/css/editormd.preview.css' /> 

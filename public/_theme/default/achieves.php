@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en-US">
+<html lang="zh-CN">
     <head>
         <?php require("inc/header.php");?>
         
@@ -31,7 +31,7 @@
                             foreach ($articles as $key => $article_meta) {
                                 # code...
                         ?>
-                        <li> <a href="article/<?=$article_meta['slug']?>" class="achieve_title"><?=$article_meta['title']?> <span class="small_gray">on <?=$article_meta['date']?></span></a> </li>
+                        <li> <a href="article/<?=str_replace('.md', '', $key)?>" class="achieve_title"><?=$article_meta['title']?> <span class="small_gray">on <?=$article_meta['date']?></span></a> </li>
                         <?php
                             }
                         ?>

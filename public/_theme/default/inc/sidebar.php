@@ -22,8 +22,8 @@
                             <br>
                             <br>
                             
-                            Powered by <a href="https://github.com/bigtran/translog">translog</a>, <br>
-                            Theme by <a href="https://github.com/bigtran/ThreeLittleBirds">threelittlebirds</a>.<br><br>
+                            Powered by <a href="https://github.com/bigtran/translog" target="_blank">translog</a>, <br>
+                            Theme by <a href="https://github.com/bigtran/ThreeLittleBirds" target="_blank">threelittlebirds</a>.<br><br>
 
                             &copy; <?=_siteInfo('copyright')?><br>
                         </div>
