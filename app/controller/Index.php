@@ -11,18 +11,15 @@ class Index
         $home_url = _siteInfo('home');
 
         if(($home_url == '/index') or ($home_url == '/index/index')){
-            return view("index", ['nothing' => ""]);
+            $articles = getAllArticlesInfo();
+            return view("index", ['articles' => $articles]);
         }else{
             return redirect($home_url);
         }
     }
 
     public function test(){
-        // $thepost = _thePost("hello-translog");
-
-        $articles = getAllArticlesInfo();
-        
-        return json($articles);
+        return json();
     }
 
     
