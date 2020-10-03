@@ -1,6 +1,6 @@
 ---
 title: 道阻且长，行则将至
-date: 2020/09/30 01:10
+date: 2020/10/03 01:10
 draft: true
 slug: road-ahead-is-long-and-hard
 categories:

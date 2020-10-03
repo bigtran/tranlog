@@ -1,6 +1,6 @@
 ---
 title: 为什么搞translog
-date: 2020/09/30 01:10
+date: 2020/10/01 01:10
 draft: true
 slug: why-translog
 categories:
