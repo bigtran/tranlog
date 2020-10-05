@@ -1,0 +1,137 @@
+root@http-s1:~/webman# ps -aux | grep php
+root       843  0.0  1.6 375140 16376 ?        Ss   Oct01   0:08 php-fpm: master process (/etc/php/5.6/fpm/php-fpm.conf)
+root      3683  0.0  0.7 154820  7416 ?        S    Oct03   0:00 WorkerMan: master process  start_file=/root/webman/translog/start.php
+root      8344  0.0  0.7 154820  7384 ?        S    02:22   0:00 WorkerMan: master process  start_file=/root/webman/translog/start.php
+www-data 14607  0.0  3.0 456824 30528 ?        S    Oct03   0:12 php-fpm: pool www
+www-data 15718  0.0  1.9 382020 19476 ?        S    10:40   0:01 php-fpm: pool www
+root     17691  0.0  0.0  14248   884 pts/1    S+   13:18   0:00 grep --color=auto php
+www-data 22992  0.0  2.9 456536 30276 ?        S    Oct02   0:24 php-fpm: pool www
+root@http-s1:~/webman# cd translog
+root@http-s1:~/webman/translog# ls -lsh
+total 52K
+4.0K drwxr-xr-x  8 root root 4.0K Oct  4 02:07 app
+4.0K drwxr-xr-x  2 root root 4.0K Oct  4 02:07 coding-memo
+4.0K -rw-r--r--  1 root root 1.2K Oct  4 02:07 composer.json
+4.0K drwxr-xr-x  2 root root 4.0K Oct  4 02:22 config
+4.0K drwxr-xr-x  2 root root 4.0K Oct  4 02:07 process
+4.0K drwxr-xr-x  3 root root 4.0K Oct  4 02:07 public
+4.0K -rw-r--r--  1 root root 2.3K Oct  4 02:07 README.md
+4.0K drwxr-xr-x  4 root root 4.0K Oct  4 02:22 runtime
+4.0K drwxr-xr-x  3 root root 4.0K Oct  4 02:10 _site
+8.0K -rw-r--r--  1 root root 4.2K Oct  4 02:07 start.php
+4.0K drwxr-xr-x  6 root root 4.0K Oct  4 02:07 support
+4.0K drwxr-xr-x 16 root root 4.0K Oct  4 02:08 vendor
+root@http-s1:~/webman/translog# ps -aux | grep php
+root       843  0.0  1.6 375140 16376 ?        Ss   Oct01   0:08 php-fpm: master process (/etc/php/5.6/fpm/php-fpm.conf)
+root      3683  0.0  0.7 154820  7416 ?        S    Oct03   0:00 WorkerMan: master process  start_file=/root/webman/translog/start.php
+root      8344  0.0  0.7 154820  7384 ?        S    02:22   0:00 WorkerMan: master process  start_file=/root/webman/translog/start.php
+www-data 14607  0.0  3.0 456824 30528 ?        S    Oct03   0:12 php-fpm: pool www
+www-data 15718  0.0  1.9 382020 19476 ?        S    10:40   0:01 php-fpm: pool www
+root     17949  0.0  0.0  14248   880 pts/1    S+   13:18   0:00 grep --color=auto php
+www-data 22992  0.0  2.9 456536 30276 ?        S    Oct02   0:25 php-fpm: pool www
+root@http-s1:~/webman/translog# php7.4 start.php status
+Workerman[start.php] status 
+----------------------------------------------GLOBAL STATUS----------------------------------------------------
+Workerman version:4.0.10          PHP version:7.4.10
+start time:2020-10-04 02:22:54   run 0 days 10 hours   
+load average: 0.12, 0, 0         event-loop:\Workerman\Events\Select
+2 workers       25 processes
+worker_name  exit_status      exit_count
+webman       0                0
+monitor      0                0
+----------------------------------------------PROCESS STATUS---------------------------------------------------
+pid     memory  listening           worker_name  connections send_fail timers  total_request qps    status
+8345    6M      http://0.0.0.0:8787 webman       1           0         0       25            0      [idle]
+8346    6M      http://0.0.0.0:8787 webman       1           0         0       22            0      [idle]
+8347    6M      http://0.0.0.0:8787 webman       1           0         0       67            0      [idle]
+8348    6M      http://0.0.0.0:8787 webman       1           0         0       103           0      [idle]
+8349    6M      http://0.0.0.0:8787 webman       1           0         0       66            0      [idle]
+8350    6M      http://0.0.0.0:8787 webman       1           0         0       193           0      [idle]
+8351    6M      http://0.0.0.0:8787 webman       1           0         0       125           0      [idle]
+8352    6M      http://0.0.0.0:8787 webman       1           0         0       124           0      [idle]
+8353    6M      http://0.0.0.0:8787 webman       1           0         0       31            0      [idle]
+8354    6M      http://0.0.0.0:8787 webman       1           0         0       35            0      [idle]
+8355    6M      http://0.0.0.0:8787 webman       1           0         0       135           0      [idle]
+8356    6M      http://0.0.0.0:8787 webman       1           0         0       148           0      [idle]
+8357    6M      http://0.0.0.0:8787 webman       1           0         0       32            0      [idle]
+8358    6M      http://0.0.0.0:8787 webman       1           0         0       29            0      [idle]
+8359    6M      http://0.0.0.0:8787 webman       1           0         0       21            0      [idle]
+8363    6M      http://0.0.0.0:8787 webman       1           0         0       58            0      [idle]
+8367    6M      http://0.0.0.0:8787 webman       1           0         0       26            0      [idle]
+8379    6M      http://0.0.0.0:8787 webman       1           0         0       22            0      [idle]
+8380    6M      http://0.0.0.0:8787 webman       1           0         0       22            0      [idle]
+8383    6M      http://0.0.0.0:8787 webman       1           0         0       62            0      [idle]
+8386    6M      http://0.0.0.0:8787 webman       1           0         0       33            0      [idle]
+8390    6M      http://0.0.0.0:8787 webman       1           0         0       26            0      [idle]
+8394    6M      http://0.0.0.0:8787 webman       1           0         0       27            0      [idle]
+8397    6M      http://0.0.0.0:8787 webman       1           0         0       110           0      [idle]
+8399    4M      none                monitor      0           0         0       0             0      [idle]
+----------------------------------------------PROCESS STATUS---------------------------------------------------
+Summary 148M    -                   -            24          0         0       1542          0      [Summary] 
+root@http-s1:~/webman/translog# php7.4 start.php stop
+Workerman[start.php] stop 
+Workerman[start.php] is stopping ...
+Workerman[start.php] stop success
+root@http-s1:~/webman/translog# php7.4 start.php status
+Workerman[start.php] status 
+Workerman[start.php] not run
+root@http-s1:~/webman/translog# php7.4 start.php status
+Workerman[start.php] status 
+Workerman[start.php] not run
+root@http-s1:~/webman/translog# ps -aux | grep php
+root       843  0.0  1.6 375140 16376 ?        Ss   Oct01   0:08 php-fpm: master process (/etc/php/5.6/fpm/php-fpm.conf)
+root      3683  0.0  0.7 154820  7416 ?        S    Oct03   0:00 WorkerMan: master process  start_file=/root/webman/translog/start.php
+www-data 14607  0.0  3.0 456824 30528 ?        S    Oct03   0:12 php-fpm: pool www
+www-data 15718  0.0  1.9 382020 19476 ?        S    10:40   0:01 php-fpm: pool www
+root     19459  0.0  0.0  14248   880 pts/1    S+   13:21   0:00 grep --color=auto php
+www-data 22992  0.0  2.9 456536 30276 ?        S    Oct02   0:25 php-fpm: pool www
+root@http-s1:~/webman/translog# php start.php stop
+Workerman[start.php] stop 
+Workerman[start.php] not run
+root@http-s1:~/webman/translog# ps -aux | grep php
+root       843  0.0  1.6 375140 16376 ?        Ss   Oct01   0:08 php-fpm: master process (/etc/php/5.6/fpm/php-fpm.conf)
+root      3683  0.0  0.7 154820  7416 ?        S    Oct03   0:00 WorkerMan: master process  start_file=/root/webman/translog/start.php
+www-data 14607  0.0  3.0 456824 30528 ?        S    Oct03   0:12 php-fpm: pool www
+www-data 15718  0.0  1.9 382020 19476 ?        S    10:40   0:01 php-fpm: pool www
+root     19615  0.0  0.0  14248   884 pts/1    S+   13:21   0:00 grep --color=auto php
+www-data 22992  0.0  2.9 456536 30276 ?        S    Oct02   0:25 php-fpm: pool www
+root@http-s1:~/webman/translog# kill -9 3683
+root@http-s1:~/webman/translog# ps -aux | grep php
+root       843  0.0  1.6 375140 16376 ?        Ss   Oct01   0:08 php-fpm: master process (/etc/php/5.6/fpm/php-fpm.conf)
+www-data 14607  0.0  3.0 456824 30528 ?        S    Oct03   0:12 php-fpm: pool www
+www-data 15718  0.0  1.9 382020 19476 ?        S    10:40   0:01 php-fpm: pool www
+root     19983  0.0  0.0  14248   888 pts/1    S+   13:21   0:00 grep --color=auto php
+www-data 22992  0.0  2.9 456536 30276 ?        S    Oct02   0:25 php-fpm: pool www
+root@http-s1:~/webman/translog# ps -aux | grep php
+root       843  0.0  1.6 375140 16376 ?        Ss   Oct01   0:08 php-fpm: master process (/etc/php/5.6/fpm/php-fpm.conf)
+www-data 14607  0.0  3.0 456824 30528 ?        S    Oct03   0:12 php-fpm: pool www
+www-data 15718  0.0  1.9 382020 19476 ?        S    10:40   0:01 php-fpm: pool www
+root     20213  0.0  0.0  14248   888 pts/1    S+   13:22   0:00 grep --color=auto php
+www-data 22992  0.0  2.9 456536 30276 ?        S    Oct02   0:25 php-fpm: pool www
+root@http-s1:~/webman/translog# php7.4 start.php start -d
+Workerman[start.php] start in DAEMON mode
+----------------------------------------- WORKERMAN -----------------------------------------
+Workerman version:4.0.10          PHP version:7.4.10
+------------------------------------------ WORKERS ------------------------------------------
+proto   user            worker          listen                 processes    status           
+tcp     root            webman          http://0.0.0.0:8787    24            [OK]            
+tcp     root            monitor         none                   1             [OK]            
+---------------------------------------------------------------------------------------------
+Input "php start.php stop" to stop. Start success.
+
+
+root@http-s1:~/webman/translog# ps -aux | grep php
+root       843  0.0  1.6 375140 16376 ?        Ss   Oct01   0:08 php-fpm: master process (/etc/php/5.6/fpm/php-fpm.conf)
+www-data 14607  0.0  3.0 456824 30536 ?        S    Oct03   0:12 php-fpm: pool www
+www-data 15718  0.0  1.9 382020 19520 ?        S    10:40   0:01 php-fpm: pool www
+root     20880  0.0  1.1 154820 11316 ?        S    13:23   0:00 WorkerMan: master process  start_file=/root/webman/translog/start.php
+root     21025  0.0  0.0  14248   932 pts/1    S+   13:23   0:00 grep --color=auto php
+www-data 22992  0.0  2.9 456536 30276 ?        S    Oct02   0:25 php-fpm: pool www
+root@http-s1:~/webman/translog# ps -aux | grep php
+root       843  0.0  1.6 375140 16376 ?        Ss   Oct01   0:08 php-fpm: master process (/etc/php/5.6/fpm/php-fpm.conf)
+www-data 14607  0.0  3.0 456824 30536 ?        S    Oct03   0:12 php-fpm: pool www
+www-data 15718  0.0  1.9 382020 19520 ?        S    10:40   0:01 php-fpm: pool www
+root     20880  0.0  1.1 154820 11316 ?        S    13:23   0:00 WorkerMan: master process  start_file=/root/webman/translog/start.php
+root     21997  0.0  0.0  14248   956 pts/1    S+   13:24   0:00 grep --color=auto php
+www-data 22992  0.0  2.9 456536 30276 ?        S    Oct02   0:25 php-fpm: pool www
+root@http-s1:~/webman/translog# 

@@ -1,0 +1,38 @@
+Error: Call to undefined function _siteInfo() in /root/webman/translog/public/_theme/default/inc/header.php:1
+Stack trace:
+#0 /root/webman/translog/public/_theme/default/index.php(4): require()
+#1 /root/webman/translog/support/view/TransLogTheme.php(39): include('/root/webman/tr...')
+#2 /root/webman/translog/support/helpers.php(169): support\view\TransLogTheme::render()
+#3 /root/webman/translog/app/controller/Index.php(14): view()
+#4 /root/webman/translog/vendor/workerman/webman-framework/src/App.php(140): app\controller\Index->index()
+#5 /root/webman/translog/vendor/workerman/workerman/Connection/TcpConnection.php(660): Webman\App->onMessage()
+#6 /root/webman/translog/vendor/workerman/workerman/Events/Select.php(293): Workerman\Connection\TcpConnection->baseRead()
+#7 /root/webman/translog/vendor/workerman/workerman/Worker.php(2417): Workerman\Events\Select->loop()
+#8 /root/webman/translog/vendor/workerman/workerman/Worker.php(1542): Workerman\Worker->run()
+#9 /root/webman/translog/vendor/workerman/workerman/Worker.php(1372): Workerman\Worker::forkOneWorkerForLinux()
+#10 /root/webman/translog/vendor/workerman/workerman/Worker.php(1346): Workerman\Worker::forkWorkersForLinux()
+#11 /root/webman/translog/vendor/workerman/workerman/Worker.php(542): Workerman\Worker::forkWorkers()
+#12 /root/webman/translog/start.php(136): Workerman\Worker::runAll()
+#13 {main}
+
+
+
+
+
+Webman\Exception\NotFoundException: Class 'support\exception\Handler' not found in /root/webman/translog/vendor/workerman/webman-framework/src/Container.php:53
+Stack trace:
+#0 /root/webman/translog/vendor/workerman/webman-framework/src/App.php(186): Webman\Container->make()
+#1 /root/webman/translog/vendor/workerman/webman-framework/src/App.php(170): Webman\App::exceptionResponse()
+#2 /root/webman/translog/vendor/workerman/workerman/Connection/TcpConnection.php(660): Webman\App->onMessage()
+#3 /root/webman/translog/vendor/workerman/workerman/Events/Select.php(293): Workerman\Connection\TcpConnection->baseRead()
+#4 /root/webman/translog/vendor/workerman/workerman/Worker.php(2417): Workerman\Events\Select->loop()
+#5 /root/webman/translog/vendor/workerman/workerman/Worker.php(1542): Workerman\Worker->run()
+#6 /root/webman/translog/vendor/workerman/workerman/Worker.php(1372): Workerman\Worker::forkOneWorkerForLinux()
+#7 /root/webman/translog/vendor/workerman/workerman/Worker.php(1346): Workerman\Worker::forkWorkersForLinux()
+#8 /root/webman/translog/vendor/workerman/workerman/Worker.php(542): Workerman\Worker::forkWorkers()
+#9 /root/webman/translog/start.php(136): Workerman\Worker::runAll()
+#10 {main}
+
+
+
+原因是开了两个webman进程
