@@ -1,0 +1,125 @@
+root@http-s1:~/webman/translog# netstat | grep 8787
+tcp        0      0 localhost:35874         localhost:8787          TIME_WAIT
+tcp        0      0 localhost:8787          localhost:35856         TIME_WAIT
+tcp        0      0 localhost:35846         localhost:8787          TIME_WAIT
+tcp        0      0 localhost:8787          localhost:35850         TIME_WAIT
+tcp        0      0 localhost:35870         localhost:8787          TIME_WAIT
+tcp        0      0 localhost:35866         localhost:8787          TIME_WAIT
+tcp        0      0 localhost:35864         localhost:8787          TIME_WAIT
+tcp        0      0 localhost:35844         localhost:8787          TIME_WAIT
+tcp        0      0 localhost:8787          localhost:35854         TIME_WAIT
+tcp        0      0 localhost:35860         localhost:8787          TIME_WAIT
+tcp        0      0 localhost:35872         localhost:8787          TIME_WAIT
+tcp        0      0 localhost:35862         localhost:8787          TIME_WAIT
+tcp        0      0 localhost:8787          localhost:35852         TIME_WAIT
+tcp        0      0 localhost:35868         localhost:8787          TIME_WAIT
+tcp        0      0 localhost:8787          localhost:35848         TIME_WAIT
+tcp        0      0 localhost:8787          localhost:35858         TIME_WAIT
+tcp        0      0 localhost:35842         localhost:8787          TIME_WAIT
+root@http-s1:~/webman/translog# ps -aux | grep php
+root       843  0.0  1.4 375140 14956 ?        Ss   Oct01   0:15 php-fpm: master process (/etc/php/5.6/fpm/php-fpm.conf)
+root     16318  0.0  0.0  14248   964 pts/1    S+   18:37   0:00 grep --color=auto php
+www-data 27348  0.0  1.9 456548 19788 ?        S    08:47   0:01 php-fpm: pool www
+www-data 28295  0.0  1.6 381796 16768 ?        S    10:14   0:00 php-fpm: pool www
+www-data 28856  0.0  1.9 382020 20304 ?        S    14:32   0:00 php-fpm: pool www
+root@http-s1:~/webman/translog# ps -aux | grep start
+root     16374  0.0  0.0  14248   920 pts/1    S+   18:37   0:00 grep --color=auto start
+root@http-s1:~/webman/translog# ps -aux | grep php7.4
+root     16444  0.0  0.0  14248   916 pts/1    S+   18:37   0:00 grep --color=auto php7.4
+root@http-s1:~/webman/translog# ps -aux | grep webman
+root      3175  0.0  1.2 157004 13044 ?        S    18:16   0:00 WorkerMan: worker process  webman http://0.0.0.0:8787
+root      3176  0.0  1.2 157004 13060 ?        S    18:16   0:00 WorkerMan: worker process  webman http://0.0.0.0:8787
+root      3684  0.0  1.2 156868 12928 ?        S    Oct03   0:00 WorkerMan: worker process  webman http://0.0.0.0:8787
+root      3685  0.0  1.1 156868 11792 ?        S    Oct03   0:00 WorkerMan: worker process  webman http://0.0.0.0:8787
+root     13208  0.3  1.2 157004 13124 ?        S    18:32   0:01 WorkerMan: worker process  webman http://0.0.0.0:8787
+root     13209  0.3  1.3 157004 13360 ?        S    18:32   0:01 WorkerMan: worker process  webman http://0.0.0.0:8787
+root     16515  0.0  0.1  14248  1032 pts/1    S+   18:37   0:00 grep --color=auto webman
+root@http-s1:~/webman/translog# ps -aux | grep php
+root       843  0.0  1.4 375140 14956 ?        Ss   Oct01   0:15 php-fpm: master process (/etc/php/5.6/fpm/php-fpm.conf)
+root     16827  0.0  0.0  14248   924 pts/1    S+   18:38   0:00 grep --color=auto php
+www-data 27348  0.0  1.9 456548 19788 ?        S    08:47   0:01 php-fpm: pool www
+www-data 28295  0.0  1.6 381796 16768 ?        S    10:14   0:00 php-fpm: pool www
+www-data 28856  0.0  1.9 382020 20304 ?        S    14:32   0:00 php-fpm: pool www
+
+
+
+
+
+________________________________________________________________________________________________________________
+
+
+
+
+
+
+root@http-s1:~/webman/translog# php start.php start -d
+Workerman[start.php] start in DAEMON mode
+----------------------------------------- WORKERMAN -----------------------------------------
+Workerman version:4.0.10          PHP version:7.4.10
+------------------------------------------ WORKERS ------------------------------------------
+proto   user            worker          listen                 processes    status
+tcp     root            webman          http://0.0.0.0:8787    2             [OK]
+tcp     root            monitor         none                   1             [OK]
+---------------------------------------------------------------------------------------------
+Input "php start.php stop" to stop. Start success.
+
+root@http-s1:~/webman/translog#
+root@http-s1:~/webman/translog#
+root@http-s1:~/webman/translog# ps -aux | grep webman
+root      2567  0.0  1.1 154820 11364 ?        S    18:43   0:00 WorkerMan: master process  start_file=/root/webman/translog/start.php
+root      2568  0.1  1.2 156868 12672 ?        S    18:43   0:00 WorkerMan: worker process  webman http://0.0.0.0:8787
+root      2569  0.3  1.2 156868 12672 ?        S    18:43   0:00 WorkerMan: worker process  webman http://0.0.0.0:8787
+root      2697  0.0  0.0  14248   980 pts/0    S+   18:43   0:00 grep --color=auto webman
+root@http-s1:~/webman/translog# ps -aux | grep php
+root       805  0.0  3.0 375140 30684 ?        Ss   18:41   0:00 php-fpm: master process (/etc/php/5.6/fpm/php-fpm.conf)
+www-data  1145  0.0  0.7 375140  7776 ?        S    18:41   0:00 php-fpm: pool www
+www-data  1146  0.0  0.7 375140  7776 ?        S    18:41   0:00 php-fpm: pool www
+root      2567  0.0  1.1 154820 11364 ?        S    18:43   0:00 WorkerMan: master process  start_file=/root/webman/translog/start.php
+root      2873  0.0  0.1  14248  1036 pts/0    S+   18:43   0:00 grep --color=auto php
+root@http-s1:~/webman/translog# netstat | grep 8787
+root@http-s1:~/webman/translog# netstat | grep 8787
+root@http-s1:~/webman/translog# netstat | grep 8787
+root@http-s1:~/webman/translog# netstat | grep 8787
+tcp        0      0 localhost:8787          localhost:51298         TIME_WAIT
+tcp        0      0 localhost:8787          localhost:51356         TIME_WAIT
+tcp        0      0 localhost:8787          localhost:51328         TIME_WAIT
+tcp        0      0 localhost:8787          localhost:51372         TIME_WAIT
+tcp        0      0 localhost:51308         localhost:8787          TIME_WAIT
+tcp        0      0 localhost:8787          localhost:51364         TIME_WAIT
+tcp        0      0 localhost:51322         localhost:8787          TIME_WAIT
+tcp        0      0 localhost:8787          localhost:51340         TIME_WAIT
+tcp        0      0 localhost:8787          localhost:51354         TIME_WAIT
+tcp        0      0 localhost:8787          localhost:51362         TIME_WAIT
+tcp        0      0 localhost:51304         localhost:8787          TIME_WAIT
+tcp        0      0 localhost:8787          localhost:51342         TIME_WAIT
+tcp        0      0 localhost:8787          localhost:51370         TIME_WAIT
+tcp        0      0 localhost:8787          localhost:51296         TIME_WAIT
+tcp        0      0 localhost:8787          localhost:51336         TIME_WAIT
+tcp        0      0 localhost:8787          localhost:51352         TIME_WAIT
+tcp        0      0 localhost:51292         localhost:8787          TIME_WAIT
+tcp        0      0 localhost:8787          localhost:51330         TIME_WAIT
+tcp        0      0 localhost:8787          localhost:51348         TIME_WAIT
+tcp        0      0 localhost:51324         localhost:8787          TIME_WAIT
+tcp        0      0 localhost:51374         localhost:8787          TIME_WAIT
+tcp        0      0 localhost:51326         localhost:8787          TIME_WAIT
+tcp        0      0 localhost:8787          localhost:51358         TIME_WAIT
+tcp        0      0 localhost:51320         localhost:8787          TIME_WAIT
+tcp        0      0 localhost:51302         localhost:8787          TIME_WAIT
+tcp        0      0 localhost:8787          localhost:51338         TIME_WAIT
+tcp        0      0 localhost:51318         localhost:8787          TIME_WAIT
+tcp        0      0 localhost:8787          localhost:51332         TIME_WAIT
+tcp        0      0 localhost:8787          localhost:51346         TIME_WAIT
+tcp        0      0 localhost:8787          localhost:51344         TIME_WAIT
+tcp        0      0 localhost:51316         localhost:8787          TIME_WAIT
+tcp        0      0 localhost:51310         localhost:8787          TIME_WAIT
+tcp        0      0 localhost:51306         localhost:8787          TIME_WAIT
+tcp        0      0 localhost:8787          localhost:51368         TIME_WAIT
+tcp        0      0 localhost:51314         localhost:8787          TIME_WAIT
+tcp        0      0 localhost:51312         localhost:8787          TIME_WAIT
+tcp        0      0 localhost:8787          localhost:51360         TIME_WAIT
+tcp        0      0 localhost:8787          localhost:51366         TIME_WAIT
+tcp        0      0 localhost:51300         localhost:8787          TIME_WAIT
+tcp        0      0 localhost:8787          localhost:51334         TIME_WAIT
+tcp        0      0 localhost:8787          localhost:51294         TIME_WAIT
+tcp        0      0 localhost:8787          localhost:51350         TIME_WAIT
+root@http-s1:~/webman/translog#
