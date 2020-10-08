@@ -23,15 +23,14 @@ class TransLogTheme implements View
 {
     public static function render($template, $vars, $app = null)
     {
-        $theme_dir = env('THEME_NAME', 'default');
         
         static $view_suffix;
         $view_suffix = $view_suffix ? : config('view.view_suffix', 'php');
         $app_name = $app == null ? request()->app : $app;
         if ($app_name === '') {
-            $view_path = public_path() . "/_theme/". $theme_dir."/$template.$view_suffix";
+            $view_path = public_path() . "/_theme/$template.$view_suffix";
         } else {
-            $view_path = public_path() . "/_theme/". $theme_dir. "/$app_name/$template.$view_suffix";
+            $view_path = public_path() . "/_theme/$app_name/$template.$view_suffix";
         }
         \extract($vars);
         \ob_start();
