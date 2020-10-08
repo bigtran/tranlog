@@ -4,11 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Docs | Documentation HTML Template</title>
-    <link rel="shortcut icon" type="image/png" href="https://via.placeholder.com/20.png" >
-    <link href="https://fonts.googleapis.com/css?family=Heebo:300,400" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css" />
-    <script src="js/uikit.js"></script>
+    <title><?=_siteInfo("title");?></title>
+    <link rel="stylesheet" href="<?=_themeUrl()?>css/main.css" />
+    <script src="<?=_themeUrl()?>js/uikit.js"></script>
 </head>
 
 <body>
@@ -256,40 +254,10 @@
   </div>
 </div>
 
-<footer class="uk-section uk-text-center uk-text-muted">
-	<div class="uk-container uk-container-small">
-		<div>
-			<ul class="uk-subnav uk-flex-center">
-				<li><a href="#">Home</a></li>
-				<li><a href="blog.html">Blog</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</div>
-		<div class="uk-margin-medium">
-			<div data-uk-grid class="uk-child-width-auto uk-grid-small uk-flex-center">
-				<div class="uk-first-column">
-					<a href="https://twitter.com/" data-uk-icon="icon: twitter" class="uk-icon-link uk-icon" target="_blank"></a>
-				</div>
-				<div>
-					<a href="https://www.facebook.com/" data-uk-icon="icon: facebook" class="uk-icon-link uk-icon"
-						target="_blank"></a>
-				</div>
-				<div>
-					<a href="https://www.instagram.com/" data-uk-icon="icon: instagram" class="uk-icon-link uk-icon"
-						target="_blank"></a>
-				</div>
-				<div>
-					<a href="https://vimeo.com/" data-uk-icon="icon: vimeo" class="uk-icon-link uk-icon" target="_blank"></a>
-				</div>
-			</div>
-		</div>
-		<div class="uk-margin-medium uk-text-small copyright link-secondary">Made by a <a
-				href="https://ivanchromjak.com/">human</a> somewhere on the planet earth.</div>
-	</div>
-</footer>
+<?php require("inc/footer.php");?>
 
-<script src="js/awesomplete.js"></script>
-<script src="js/custom.js"></script>
+<script src="<?=_themeUrl()?>js/awesomplete.js"></script>
+<script src="<?=_themeUrl()?>js/custom.js"></script>
 
 
 </body>

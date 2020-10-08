@@ -2,26 +2,20 @@
 	    <div class="uk-container">
 	      <div data-uk-navbar>
 	        <div class="uk-navbar-left">
-	          <a class="uk-navbar-item uk-logo uk-visible@m" href="index.php"><?=_siteInfo("title")?></a>
+	          <a class="uk-navbar-item uk-logo uk-visible@m" href="/"><?=_siteInfo("title")?></a>
 	          <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas-docs" data-uk-toggle><span
 	              data-uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Docs</span></a>
 	          <ul class="uk-navbar-nav uk-visible@m">
-	            <li class="uk-active"><a href="index.php">Home</a></li>
-	            <li ><a href="doc.php">Docs</a></li>
+	            <li class="uk-active"><a href="/">Home</a></li>
+	            <li ><a href="/page/doc">Docs</a></li>
 	            <li ><a href="blog.php">Blog</a></li>
 	            <li >
-	              <a href="#">Changelogs</a>
-	              <div class="uk-navbar-dropdown">
-	                <ul class="uk-nav uk-navbar-dropdown-nav">
-	                  <li><a href="changelog-timeline.php">Timeline Style</a></li>
-	                  <li><a href="changelog-posts.php">Post Style</a></li>
-	                </ul>
-	              </div>            
+	              <a href="/page/changelogs">Changelogs</a>         
 	            </li>
 	          </ul>
 	        </div>
 	        <div class="uk-navbar-center uk-hidden@m">
-	          <a class="uk-navbar-item uk-logo" href="index.php">Docs</a>
+	          <a class="uk-navbar-item uk-logo" href="/"><?=_siteInfo("title")?></a>
 	        </div>
 	        <div class="uk-navbar-right">
 	          <div>
@@ -37,12 +31,12 @@
 	          <ul class="uk-navbar-nav uk-visible@m">
 	            <li>
 	              <div class="uk-navbar-item">
-	                <a class="uk-button uk-button-primary-outline" href="changelog-timeline.php">Changelog</a>
+	                <a class="uk-button uk-button-primary-outline" href="https://github.com/bigtran/translog">github</a>
 	              </div>
 	            </li>
 	            <li>
 	              <div class="uk-navbar-item">
-	                <a class="uk-button uk-button-success" href="contact.php">Contact</a>
+	                <a class="uk-button uk-button-success" href="/index">Documentation</a>
 	              </div>
 	            </li>
 	          </ul>
