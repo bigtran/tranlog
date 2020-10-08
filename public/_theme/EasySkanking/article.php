@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Docs | Documentation HTML Template</title>
-    <link rel="shortcut icon" type="image/png" href="https://via.placeholder.com/20.png" >
-    <link href="https://fonts.googleapis.com/css?family=Heebo:300,400" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css" />
-    <script src="js/uikit.js"></script>
+    <title><?=_siteInfo("title");?></title>
+    <link rel="stylesheet" href="<?=_themeUrl()?>css/main.css" />
+    <script src="<?=_themeUrl()?>js/uikit.js"></script>
+    <link rel="stylesheet" type="text/css"  href='<?=_themeUrl()?>assets/editor.md/css/editormd.preview.css' /> 
+
 </head>
 
 <body>
@@ -20,212 +20,64 @@
 <div class="uk-section">
 	<div class="uk-container uk-container-xsmall">
 		<article class="uk-article">
-			<h1 class="uk-article-title">Getting started with our application</h1>
+			<h1 class="uk-article-title"><?=$theArticle['meta']['title']?></h1>
 			<div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
-				<img class="uk-border-circle avatar" src="https://via.placeholder.com/80" alt="Tom Farrell">
 				<div>
-					Written by Tom Farrell<br>
-					<time datetime="2017-05-25T00:00:00+00:00">May 25, 2017</time>
+					Written by <?=$theArticle['meta']['author']?><br>
+					<time datetime=""><?=$theArticle['meta']['date']?></time>
 				</div>
 			</div>
-			<div class="article-content link-primary">
-				<p>Musce libero nunc, dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam,
-					ac posuere leo dapibus id. Cras fringilla convallis elit, at eleifend mi interam.</p>
-				<p>Nulla non sollicitudin. Morbi sit amet laoreet ipsum, vel pretium mi. Morbi varius, tellus in accumsan
-					blandit, elit ligula eleifend velit, luctus mattis ante nulla condimentum nulla. Etiam vestibulum risus vel
-					arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit.</p>
-				<h2 id="image-lightbox-example">Image Lightbox Example</h2>
-				<p>Nunc porta malesuada porta. Etiam tristique vestibulum dolor at ultricies. Proin hendrerit sapien sed erat
-					fermentum, at commodo velit consectetur.</p>
-				<figure data-uk-lightbox="animation: slide">
-					<a class="uk-inline" href="https://via.placeholder.com/1000x500.png" data-caption="Image in lightbox">
-						<img src="https://via.placeholder.com/1000x500" alt="Alt for image">
-						<div class="uk-position-center">
-							<span data-uk-overlay-icon></span>
-						</div>
-					</a>
-					<figcaption data-uk-grid class="uk-flex-right uk-grid uk-grid-stack"><span
-							class="uk-width-auto uk-first-column">Image in lightbox</span></figcaption>
-				</figure>
-				<p>Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit.
-					Cras a dui imperdiet, tempus metus quis, pharetra turpis. Phasellus at massa sit amet ante semper fermentum
-					sed eget lectus. Quisque id dictum magna, et dapibus turpis.</p>
-				<h2 id="example-of-code-block">Example Of Code Block</h2>
-				<p>In accumsan lacus ac neque maximus dictum. Phasellus eleifend leo id mattis bibendum. Curabitur et purus
-					turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-				<div class="language-html highlighter-rouge">
-					<div class="highlight">
-<pre class="highlight"><code><span class="nt">&lt;head&gt;</span>
-	<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=edge"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/assets/css/main.css"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"shortcut icon"</span> <span class="na">type=</span><span class="s">"image/png"</span> <span class="na">href=</span><span class="s">"/assets/img/favicon.png"</span> <span class="nt">&gt;</span>
-	<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/assets/js/main.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;/head&gt;</span>
-</code></pre>
-					</div>
-				</div>
-				<h2 id="text-and-quote">Text and Quote</h2>
-				<p>Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet, tempus metus quis, pharetra
-					turpis. Phasellus at massa sit amet ante semper fermentum sed eget lectus. Quisque id dictum magna turpis.</p>
-				<blockquote>
-					<p>Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit.
-						Cras a dui imperdiet</p>
-				</blockquote>
-				<p>In accumsan lacus ac neque maximus dictum. Phasellus eleifend leo id mattis bibendum. Curabitur et purus
-					turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-				<p>Etiam in fermentum mi. Sed et tempor felis, eu aliquet nisi. Nam eget ullamcorper arcu. Nunc porttitor nisl a
-					dolor blandit, eget consequat sem maximus. Phasellus lacinia quam porta orci malesuada, vel tincidunt.</p>
-				<div class="share uk-text-center uk-margin-medium-top">
-					<a class="uk-link-muted" href="#" rel="nofollow" 
-						target="_blank" title="Share on Twitter"><span data-uk-icon="icon: twitter; ratio: 1.2"></span></a>
-					<a class="uk-link-muted uk-margin-small-left" href="#" rel="nofollow"
-						target="_blank" title="Share on Facebook"><span data-uk-icon="icon: facebook; ratio: 1.2"></span></a>
-				</div>
+
+
+			<div class="article-content link-primary" id="article-content" style="padding: 0px;">
+				<div class="entry-content-md" style="display: none;">
+                <?=$theArticle['content']?>
+                </div>
 			</div>
 			<hr class="uk-margin-medium">
-			<div class="uk-margin-large-top paginate-post">
-				<div class="uk-child-width-expand@s uk-grid-large" data-uk-grid>
-					<div class="uk-first-column">
-						<h4>How to setup naked domain SSL with Github pages</h4>
-						<div class="uk-visible@s uk-text-muted uk-text-small">
-							<p>Libero nunc, gignissim quis turpis quis, semper vehicula dolor. Suspendisse ti...</p>
-						</div>
-						<div><a class="remove-underline hvr-back" href="#">← Previous</a></div>
-					</div>
-					<div>
-						<h4>Setting up new domain and DNS records</h4>
-						<div class="uk-visible@s uk-text-muted uk-text-small">
-							<p>Musce libero nunc, dignissim quis turpis quis, semper vehicula dolor. Suspendisse ti...</p>
-						</div>
-						<div class="uk-text-right"><a class="remove-underline hvr-forward" href="#">Next →</a></div>
-					</div>
-				</div>
-			</div>
-			<div class="uk-margin-large-top">
-				<h3>Related Posts</h3>
-				<ul class="uk-list link-secondary">
-					<li><a href="#">Selecting the right fonts and colors</a></li>
-					<li><a href="#">Design tips for choosing great images</a></li>
-					<li><a href="#">Purchasing domain name and DNS setup</a></li>
-					<li><a href="#">Using Private Browsing or Incognito mode</a></li>
-				</ul>
-			</div>
+			
 		</article>
 	</div>
 </div>
 
-<div id="offcanvas-docs" data-uk-offcanvas="overlay: true">
-  <div class="uk-offcanvas-bar">
-    <button class="uk-offcanvas-close" type="button" data-uk-close></button>
-    <h5 class="uk-margin-top">Getting Started</h5>
-    <ul class="uk-nav uk-nav-default doc-nav">
-      <li class="uk-active"><a href="doc.html">Template setup</a></li>
-      <li><a href="doc.html">Basic theme setup</a></li>
-      <li><a href="doc.html">Navigation bar</a></li>
-      <li><a href="doc.html">Footer options</a></li>
-      <li><a href="doc.html">Creating your first post</a></li>
-      <li><a href="doc.html">Creating docs posts</a></li>
-      <li><a href="doc.html">Enabling comments</a></li>
-      <li><a href="doc.html">Google Analytics</a></li>
-    </ul>
-    <h5 class="uk-margin-top">Product Features</h5>
-    <ul class="uk-nav uk-nav-default doc-nav">
-      <li><a href="doc.html">Hero page header</a></li>
-      <li><a href="doc.html">Category boxes section</a></li>
-      <li><a href="doc.html">Fearured docs section</a></li>
-      <li><a href="doc.html">Video lightbox boxes section</a></li>
-      <li><a href="doc.html">Frequently asked questions section</a></li>
-      <li><a href="doc.html">Team members section</a></li>
-      <li><a href="doc.html">Call to action section</a></li>
-      <li><a href="doc.html">Creating a changelog</a></li>
-      <li><a href="doc.html">Contact form</a></li>
-      <li><a href="doc.html">Adding media to post and doc content</a></li>
-      <li><a href="doc.html">Adding table of contents to docs</a></li>
-      <li><a href="doc.html">Adding alerts to content</a></li>
-    </ul>
-    <h5 class="uk-margin-top">Customization</h5>
-    <ul class="uk-nav uk-nav-default doc-nav">
-      <li><a href="doc.html">Translation</a></li>
-      <li><a href="doc.html">Customization</a></li>
-      <li><a href="doc.html">Development</a></li>
-      <li><a href="doc.html">Sources and credits</a></li>
-    </ul>
-    <h5 class="uk-margin-top">Help</h5>
-    <ul class="uk-nav uk-nav-default doc-nav">
-      <li><a href="doc.html">Contacting support</a></li>
-    </ul>
-  </div>
-</div>
 
-<div id="offcanvas" data-uk-offcanvas="flip: true; overlay: true">
-  <div class="uk-offcanvas-bar">
-    <a class="uk-logo" href="index.html">Docs</a>
-    <button class="uk-offcanvas-close" type="button" data-uk-close></button>
-    <ul class="uk-nav uk-nav-primary uk-nav-offcanvas uk-margin-top">
-      <li ><a href="index.html">Home</a></li>
-      <li ><a href="doc.html">Docs</a></li>
-      <li class="uk-active"><a href="blog.html">Blog</a></li>
-      <li ><a href="contact.html">Contact</a></li>
-      <li>
-        <div class="uk-navbar-item"><a class="uk-button uk-button-success" href="contact.html">Contact</a></div>
-      </li>
-    </ul>
-    <div class="uk-margin-top uk-text-center">
-      <div data-uk-grid class="uk-child-width-auto uk-grid-small uk-flex-center">
-        <div>
-          <a href="https://twitter.com/" data-uk-icon="icon: twitter" class="uk-icon-link" target="_blank"></a>
-        </div>
-        <div>
-          <a href="https://www.facebook.com/" data-uk-icon="icon: facebook" class="uk-icon-link" target="_blank"></a>
-        </div>
-        <div>
-          <a href="https://www.instagram.com/" data-uk-icon="icon: instagram" class="uk-icon-link" target="_blank"></a>
-        </div>
-        <div>
-          <a href="https://vimeo.com/" data-uk-icon="icon: vimeo" class="uk-icon-link" target="_blank"></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<?php require("inc/footer.php");?>
 
-<footer class="uk-section uk-text-center uk-text-muted">
-	<div class="uk-container uk-container-small">
-		<div>
-			<ul class="uk-subnav uk-flex-center">
-				<li><a href="#">Home</a></li>
-				<li><a href="blog.html">Blog</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</div>
-		<div class="uk-margin-medium">
-			<div data-uk-grid class="uk-child-width-auto uk-grid-small uk-flex-center">
-				<div class="uk-first-column">
-					<a href="https://twitter.com/" data-uk-icon="icon: twitter" class="uk-icon-link uk-icon" target="_blank"></a>
-				</div>
-				<div>
-					<a href="https://www.facebook.com/" data-uk-icon="icon: facebook" class="uk-icon-link uk-icon"
-						target="_blank"></a>
-				</div>
-				<div>
-					<a href="https://www.instagram.com/" data-uk-icon="icon: instagram" class="uk-icon-link uk-icon"
-						target="_blank"></a>
-				</div>
-				<div>
-					<a href="https://vimeo.com/" data-uk-icon="icon: vimeo" class="uk-icon-link uk-icon" target="_blank"></a>
-				</div>
-			</div>
-		</div>
-		<div class="uk-margin-medium uk-text-small copyright link-secondary">Made by a <a
-				href="https://ivanchromjak.com/">human</a> somewhere on the planet earth.</div>
-	</div>
-</footer>
+<script src="<?=_themeUrl()?>js/awesomplete.js"></script>
+<script src="<?=_themeUrl()?>js/custom.js"></script>
 
-<script src="js/awesomplete.js"></script>
-<script src="js/custom.js"></script>
+<script src="<?=_themeUrl()?>assets/editor.md/lib/marked.min.js"></script>
+<script src="<?=_themeUrl()?>assets/editor.md/lib/prettify.min.js"></script>
 
+<script src="<?=_themeUrl()?>assets/editor.md/lib/raphael.min.js"></script>
+<script src="<?=_themeUrl()?>assets/editor.md/lib/underscore.min.js"></script>
+<script src="<?=_themeUrl()?>assets/editor.md/lib/sequence-diagram.min.js"></script>
+<script src="<?=_themeUrl()?>assets/editor.md/lib/flowchart.min.js"></script>
+<script src="<?=_themeUrl()?>assets/editor.md/lib/jquery.flowchart.min.js"></script>
+<script src="<?=_themeUrl()?>assets/editor.md/editormd.js"></script>
+<script type="text/javascript">
+    $(function() {
+        var testEditormdView;
+
+        testEditormdView = editormd.markdownToHTML("article-content", {
+                markdown        : $(".entry-content-md").html(),
+                //htmlDecode      : true,       // 开启 HTML 标签解析，为了安全性，默认不开启
+                htmlDecode      : "style,script,iframe",  // you can filter tags decode
+                //toc             : false,
+                tocm            : true,    // Using [TOCM]
+                tocContainer    : "#custom-toc-container", // 自定义 ToC 容器层
+                //gfm             : false,
+                tocDropdown     : true,
+                // markdownSourceCode : true, // 是否保留 Markdown 源码，即是否删除保存源码的 Textarea 标签
+                emoji           : true,
+                taskList        : true,
+                tex             : true,  // 默认不解析
+                flowChart       : true,  // 默认不解析
+                sequenceDiagram : true,  // 默认不解析
+            });
+    });
+    
+</script>
 
 </body>
 
