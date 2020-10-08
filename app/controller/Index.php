@@ -9,10 +9,11 @@ class Index
     public function index(Request $request)
     {
         $home_url = _siteInfo('home');
+        $theme = _siteInfo('theme');
 
         if(($home_url == '/index') or ($home_url == '/index/index')){
             $articles = getAllArticlesInfo();
-            return view("index", ['articles' => $articles]);
+            return view($theme."/index", ['articles' => $articles]);
         }else{
             return redirect($home_url);
         }

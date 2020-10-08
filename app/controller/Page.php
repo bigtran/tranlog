@@ -8,6 +8,6 @@ class Page
 {
     public function index($request, $slug)
     {
-        return view($slug, ['nothing' => "nothing"]);
+        return view(_siteInfo('theme').'/'.$slug, ['nothing' => "nothing"]);
     }
 }
