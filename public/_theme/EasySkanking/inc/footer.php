@@ -29,3 +29,4 @@
 				href="https://ivanchromjak.com/">human</a> somewhere on the planet earth.</div>
 	</div>
 </footer>
+<script type="text/javascript" src="<?=_themeUrl()?>js/jquery.min.js"></script>	

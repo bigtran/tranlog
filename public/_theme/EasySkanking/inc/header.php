@@ -2,7 +2,7 @@
 	    <div class="uk-container">
 	      <div data-uk-navbar>
 	        <div class="uk-navbar-left">
-	          <a class="uk-navbar-item uk-logo uk-visible@m" href="index.php">Docs</a>
+	          <a class="uk-navbar-item uk-logo uk-visible@m" href="index.php"><?=_siteInfo("title")?></a>
 	          <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas-docs" data-uk-toggle><span
 	              data-uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Docs</span></a>
 	          <ul class="uk-navbar-nav uk-visible@m">
