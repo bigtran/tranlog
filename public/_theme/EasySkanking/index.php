@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>bigtran's notes</title>
+    <title><?=_siteInfo("title");?></title>
     <link rel="stylesheet" href="<?=_themeUrl()?>css/main.css" />
     <script src="<?=_themeUrl()?>js/uikit.js"></script>
 </head>
