@@ -11,9 +11,7 @@
 
 <body>
 
-<div data-uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent; top: 200">
-  <?php require("inc/header.php");?>
-</div>
+<?php require("inc/header.php");?>
 
 <div class="uk-section">
   <div class="uk-container uk-container-small">

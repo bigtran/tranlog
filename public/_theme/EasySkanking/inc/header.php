@@ -1,4 +1,5 @@
-<nav class="uk-navbar-container">
+<div data-uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent; top: 200">
+	  <nav class="uk-navbar-container">
 	    <div class="uk-container">
 	      <div data-uk-navbar>
 	        <div class="uk-navbar-left">
@@ -46,3 +47,4 @@
 	      </div>
 	    </div>
 	  </nav>
+	</div>
