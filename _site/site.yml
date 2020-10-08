@@ -1,10 +1,10 @@
 ---
 title: bigtran's notes
 description: 一个用translog搭建的站点，Another translog site
-baseURL: http://127.0.0.1:8787/
+baseURL: http://bigtran.opmonitor.com/
 copyright: bigtran 2020
 home: /index
-theme: default
+theme: EasySkanking
 keywords: webman, PHP Blog, bigtran
 author: bigtran
 
