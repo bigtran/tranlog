@@ -4,7 +4,7 @@ description: 一个用translog搭建的站点，Another translog site
 baseURL: http://bigtran.opmonitor.com/
 copyright: bigtran 2020
 home: /index
-theme: EasySkanking
+theme: default
 keywords: webman, PHP Blog, bigtran
 author: bigtran
 
