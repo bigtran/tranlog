@@ -59,3 +59,6 @@ blog application based on webman
 - gitalk: https://github.com/gitalk/gitalk/blob/master/readme-cn.md
 - jekyll: http://jekyllcn.com/docs/home/
 - https://forestry.io
+- wordpress plugin: https://codex.wordpress.org/zh-cn:%E6%8F%92%E4%BB%B6_API
+- https://www.wpzhiku.com/document/plugins-hooks/
+- https://www.wpdaxue.com/wordpress-theme-development.html#toc-37
