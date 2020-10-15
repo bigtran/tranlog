@@ -16,7 +16,7 @@ blog application based on webman
 - [x] 增加一些常用函数库
 - [x] 增加类Hugo的 yaml 文章解析
     - [x] site.yml 配置文件定义
-    - [ ] *.md 中 文章信息配置部分
+    - [x] *.md 中 文章信息配置部分
 - [ ] 目录结构优化
 - [x] 编辑一系列测试用的文章 —— 《孙子兵法》
 - [x] 学习wordpress，要有一个初始分类、文章、评论
@@ -32,12 +32,12 @@ blog application based on webman
         - [ ] by time
     * [ ] rss
     * [ ] 评论 和 留言 gitalk，或者用一个简单的sqlite？
-    * [ ] 基本函数
+    * [x] 基本函数
     * [ ] 一些配置项
     * [ ] 加密访问 => 用插件完成
 - [x] 模板设计
     * [x] 初始化一个简洁的模板！ —— ThreeLittleBirds
-    * [ ] 再初始化一个简洁模板，用来做文档！ —— transdoc? 
+    * [x] 再初始化一个简洁模板，用来做文档！ —— EasySkanking ? 
     * [x] 参考wordpress的函数式版面
 - [x] 文章存储
     * 使用数据库存储？
