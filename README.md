@@ -12,6 +12,7 @@ blog application based on webman
 - [ ] 学习wordpress，要有一个初始分类、文章、评论
 - [ ] 功能设计
     * [ ] blog.db  系统初始话，生成一个基本信息表
+    * [ ] 使用文件监控类，监控文章变化
     * [x] achieve
         - [ ] by category / tag / keywords —— 基础功能
         - [ ] by time
@@ -22,6 +23,8 @@ blog application based on webman
 - [ ] 最后一步，清理代码，发布
     - [ ] 原有的webman代码不动，不改
 - [ ] 补充文档
+- [ ] 插件功能
+    - hook 列表
 
 
 
