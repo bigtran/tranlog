@@ -38,6 +38,21 @@ return [
             ]
         ]
     ],
+    // 文件更新检测
+    'ArticleMonitor' => [
+        'handler'     => process\ArticleMonitor::class,
+        'reloadable'  => false,
+        'constructor' => [
+            // 监控这些目录
+            'monitor_dir' => [
+                base_path() . '/_site/_articles'
+            ],
+            // 监控这些后缀的文件
+            'monitor_extenstions' => [
+                'md'
+            ]
+        ]
+    ],
     // 其它进程
     /*'websocket'  => [
         'handler'  => process\Websocket::class,
