@@ -45,6 +45,8 @@ $property_map = [
     'reusePort',
     'transport',
 ];
+
+// 设置worker属性
 foreach ($property_map as $property) {
     if (isset($config[$property])) {
         $worker->$property = $config[$property];
@@ -62,6 +64,8 @@ $worker->onWorkerStart = function ($worker) {
         /** @var \Webman\Bootstrap $class_name */
         $class_name::start($worker);
     }
+
+    // 新建一个app实体
     $app = new App($worker, Container::instance(), Log::channel('default'), app_path(), public_path());
     Route::load(config_path() . '/route.php');
     Middleware::load(config('middleware', []));
@@ -72,6 +76,7 @@ $worker->onWorkerStart = function ($worker) {
 };
 
 
+// 加载自定义进程 （重要）
 foreach (config('process', []) as $process_name => $config) {
     $worker = new Worker($config['listen'] ?? null, $config['context'] ?? []);
     $property_map = [
@@ -106,6 +111,8 @@ foreach (config('process', []) as $process_name => $config) {
             $class_name::start($worker);
         }
 
+
+        // 暂时估计没用
         foreach ($config['services'] ?? [] as $server) {
             if (!class_exists($server['handler'])) {
                 echo "process error: class {$config['handler']} not exists\r\n";
