@@ -9,7 +9,7 @@ categories:
 
 ## 《肖申克救赎》和长期主义
 
-<img src="http://bigtran.opmonitor.com/_upload/shawshank-redemption.jpg" style="zoom:70%;" />   |   <img src="http://bigtran.opmonitor.com/_upload/shawshank.jpg" style="zoom:40%;" />   
+<img src="http://bigtran.opmonitor.com/_upload/shawshank-redemption.jpg" style="zoom:70%;" />  <img src="http://bigtran.opmonitor.com/_upload/shawshank.jpg" style="zoom:40%;" />   
 
 
 
